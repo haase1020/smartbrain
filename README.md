@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 <img src="src/logo.png" width="200" height="200">
 
->>>>>>> f1b562638df7ea2d4bab404655d239dc5e5f2db8
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

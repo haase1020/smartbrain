@@ -23,6 +23,7 @@ class Register extends React.Component {
   };
 
   onSubmitSignIn = () => {
+    localStorage.clear();
     fetch('http://localhost:3000/register', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },

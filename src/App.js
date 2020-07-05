@@ -5,7 +5,7 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Navigation from './components/Navigation/Navigation';
 import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
-import Logo from './components/Logo/Logo';
+
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import './App.css';
@@ -26,7 +26,6 @@ const particlesOptions = {
     },
   },
 };
-
 class App extends Component {
   constructor() {
     super();
@@ -83,12 +82,7 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
     app.models
-      .predict(
-        // This part has been updated with the recent Clarifai changes. Used to be:
-        // .predict(Clarifai.FACE_DETECT_MODEL, ....)
-        'c0c0ac362b03416da06ab3fa36fb58e3',
-        this.state.input
-      )
+      .predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
       .then((response) => {
         if (response) {
           fetch('http://localhost:3000/image', {
@@ -128,11 +122,10 @@ class App extends Component {
         />
         {route === 'home' ? (
           <div>
-            {/* <Logo /> */}
-            {/* <Rank
+            <Rank
               name={this.state.user.name}
               entries={this.state.user.entries}
-            /> */}
+            />
             <ImageLinkForm
               onInputChange={this.onInputChange}
               onButtonSubmit={this.onButtonSubmit}
