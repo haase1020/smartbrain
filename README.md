@@ -1,4 +1,4 @@
-![alt logo](src/logo.png | width=100 height=100)
+![alt logo](src/logo.png width=100 height=100)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
