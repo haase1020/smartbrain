@@ -6,7 +6,6 @@ class Signin extends React.Component {
     this.state = {
       signInEmail: '',
       signInPassword: '',
-      imageUrl: null,
     };
   }
 
